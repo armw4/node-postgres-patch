@@ -25,7 +25,7 @@ console.log(output) // {
                     // }
 ```
 
-You may also pass an array of keys
+You may also pass an array of keys:
 
 ```js
 var patch = require('node-postgres-patch')
@@ -113,6 +113,7 @@ export const update = (resource) => {
   ]).join(',')
 
   // somewhere we newed up a postgres client and we're also leveraging node-postgres-named
+  // callback to client.query ommited for brevity..yes..ES6 template strings again
   client.query(`
     UPDATE my_table
     SET ${set}
