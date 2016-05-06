@@ -81,8 +81,8 @@ var ordinal = output.values.length + 1
 client.query(`
   UPDATE my_table
   SET ${output.set}
-  WHERE id = ${ordinal++}
-  AND tenant_id = ${ordinal++}
+  WHERE id = $${ordinal++}
+  AND tenant_id = $${ordinal++}
   RETURNING id, last_updated_at, get
 `, allValues)
 ```
