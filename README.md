@@ -76,7 +76,8 @@ var output = patch({
 var allValues = output.values.concat([id, tenantId])
 var ordinal = output.values.length + 1
 
-// node-postgres-client (callback for client.query ommited for brevity...also note the usage of ES template strings)
+// node-postgres-client
+// callback for client.query ommited for brevity...also note the usage of ES template strings
 client.query(`
   UPDATE my_table
   SET ${output.set}
