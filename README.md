@@ -82,14 +82,16 @@ var allValues = output.values.concat([id, tenantId])
 var ordinal = output.values.length + 1
 
 // node-postgres client
-// callback for client.query ommited for brevity...also note the usage of ES template strings
+// note the usage of ES template strings
 client.query(`
   UPDATE my_table
   SET ${output.set}
   WHERE id = $${ordinal++}
   AND tenant_id = $${ordinal++}
   RETURNING id, last_updated_at, get
-`, allValues)
+  `, allValues, function (error, results) {
+    /* do stuff */
+  })
 ```
 
 I don't think this is *terrible* but it certainly would be *prettier* with `node-postgres-named`. That being said, I can live with this
@@ -119,13 +121,15 @@ export const update = (resource) => {
   ]).join(',')
 
   // somewhere we newed up a node-postgres client and we're also leveraging node-postgres-named
-  // callback to client.query ommited for brevity..yes..ES6 template strings again
+  // yes..ES6 template strings again
   client.query(`
     UPDATE my_table
     SET ${set}
     WHERE id = $id
     RETURNING id, last_updated_at, get
-    `, resource)
+    `, resource, function (error, results) {
+     /* do something */
+    })
 }
 ```
 
