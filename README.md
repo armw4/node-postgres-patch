@@ -73,6 +73,11 @@ var output = patch({
   abstractSyntaxTree: 'jason Murray'
 }, ['abstractSyntaxTree', 'antwan', 'wimberly'])
 
+// in ES6 you can just do
+//
+// const allValues = [...output.values, id, tenantId]
+//
+// among other things (:wink:)
 var allValues = output.values.concat([id, tenantId])
 var ordinal = output.values.length + 1
 
