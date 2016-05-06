@@ -76,7 +76,7 @@ var output = patch({
 var allValues = output.values.concat([id, tenantId])
 var ordinal = output.values.length + 1
 
-// node-postgres-client
+// node-postgres client
 // callback for client.query ommited for brevity...also note the usage of ES template strings
 client.query(`
   UPDATE my_table
@@ -113,7 +113,7 @@ export const update = (resource) => {
       : null,
   ]).join(',')
 
-  // somewhere we newed up a postgres client and we're also leveraging node-postgres-named
+  // somewhere we newed up a node-postgres client and we're also leveraging node-postgres-named
   // callback to client.query ommited for brevity..yes..ES6 template strings again
   client.query(`
     UPDATE my_table
