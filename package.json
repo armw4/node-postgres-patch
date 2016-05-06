@@ -12,7 +12,12 @@
     "update",
     "patch"
   ],
-  "author": "@armw4",
+  "repository": "armw4/node-postgres-patch",
+  "author": {
+    "name": "Antwan Wimberly (@armw4)",
+    "email": "antwan.wimberly.prof@gmail.com",
+    "url": "gist.github.com/armw4"
+  },
   "license": "MIT",
   "dependencies": {
     "decamelize": "^1.2.0",
