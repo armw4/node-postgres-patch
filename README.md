@@ -140,7 +140,7 @@ export const update = (resource) => {
 ```
 
 That doesn't look *too* terrible on paper. But I felt like I didn't want to be forced to repeat this sort of logic in the future.
-I suspected that being forced to manually validate the presence of each key and react accordingly was probably gonna get lame after a while.
+I suspected that being forced to manually validate the presence of each key and react accordingly would become tedious over time.
 
 > "Better we must do"
 
