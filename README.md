@@ -2,6 +2,10 @@
 
 Handle `PATCH` requests with postgres and node via `node-postgres`
 
+## Installation
+
+`npm install -S node-postgres-patch`
+
 ## Usage
 
 `node-postgres-patch` outputs an object with 2 properties:
