@@ -91,7 +91,8 @@ client.query(`
   RETURNING id, last_updated_at, get
   `, allValues, function (error, results) {
     /* do stuff */
-  })
+  }
+)
 ```
 
 I don't think this is *terrible* but it certainly would be *prettier* with `node-postgres-named`. That being said, I can live with this
@@ -129,7 +130,8 @@ export const update = (resource) => {
     RETURNING id, last_updated_at, get
     `, resource, function (error, results) {
      /* do something */
-    })
+    }
+  )
 }
 ```
 

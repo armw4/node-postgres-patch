@@ -1,10 +1,14 @@
 var pick = require('lodash.pick')
 var decamelize = require('decamelize')
-var array = require('make-array')
 var PatchError = require('./errors').PatchError
 
 module.exports = function () {
-  var safeObject = pick.apply(null, array(arguments))
+  var args = arguments
+  var argumentArray = Object.keys(args).map(function (key) {
+    return args[key]
+  })
+
+  var safeObject = pick.apply(null, argumentArray)
   var keys = Object.keys(safeObject)
 
   if (!keys.length) {

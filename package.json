@@ -22,7 +22,6 @@
   "dependencies": {
     "decamelize": "^1.2.0",
     "lodash.pick": "^4.2.0",
-    "make-array": "^1.0.1",
     "make-error": "^1.1.1"
   },
   "devDependencies": {
