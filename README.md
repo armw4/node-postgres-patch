@@ -9,7 +9,7 @@ Handle `PATCH` requests with postgres and node via `node-postgres`
 * `set` - contains the `SET` statement that should be placed within your base query
 * `values` - contains the values that map to the placeholders in `set` (these should be forwarded to `node-postgres`)
 
-You may pass a varargs style list of keys:
+You may pass a variadic list of keys:
 
 ```js
 var patch = require('node-postgres-patch')
