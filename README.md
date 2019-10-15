@@ -8,6 +8,8 @@ Handle `PATCH` requests with postgres and node via `node-postgres`
 
 ## Usage
 
+### `patch(options: Object, patchKey1, patchKey2, ...patchKeyN)`
+
 `node-postgres-patch` outputs an object with 2 properties:
 
 * `set` - contains the `SET` statement that should be placed within your base query
